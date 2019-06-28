@@ -32,7 +32,7 @@ function my_custom_wocommerce_pos_settings($settings) {
 		'class' => 'wc-enhanced-select',
 		'type' => 'multiselect',
 		'options' => $list,
-		
+
 	);
 	return $settings;
 }
@@ -44,17 +44,16 @@ function my_custom_data_to_register($inline) {
 	return $inline;
 }
 
-add_filter('wc_pos_enqueue_scripts', 'my_custom_script', 10, 1);
-add_filter('wc_pos_enqueue_styles', 'my_custom_style', 10, 1);
+add_filter('wc_pos_enqueue_scripts', 'coupon_presets_scripts', 10, 1);
+add_filter('wc_pos_enqueue_styles', 'coupon_presets_styles', 10, 1);
 
-function my_custom_style($styles) {
-	$styles['coupon_presets'] = plugin_dir_url( __FILE__ ) . 'coupons.css';
+function coupon_presets_styles($styles) {
+	$styles['coupon_presets'] = plugin_dir_url( __FILE__ ) . 'assets/coupons.css';
 	return $styles;
 }
 
-function my_custom_script($scripts) {
-	$scripts['coupon_presets'] = plugin_dir_url( __FILE__ ) . 'coupons.js';
+function coupon_presets_scripts($scripts) {
+	$scripts['coupon_presets'] = plugin_dir_url( __FILE__ ) . 'assets/coupons.js';
 	return $scripts;
 }
 ?>
-
