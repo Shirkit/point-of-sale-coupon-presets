@@ -1,11 +1,11 @@
 #modal-order_discount .wrap-custom-button-discount {
-	position: relative;
-	height: 70%;
-	overflow-y: scroll;
+  position: relative;
+  height: 70%;
+  overflow-y: scroll;
 }
 
 #modal-order_discount .wrap-custom-button-discount button {
-	float: none;
-	margin-right: 1em;
-	margin-bottom: 1em;
+  float: none;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
